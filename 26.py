@@ -15,11 +15,13 @@ def repeating(numerator, denominator):
             return len(l) - l.index(n)
     else:
         l.append(n)
-        repeating(n%denominator, denominator)
+        return repeating(n%denominator, denominator)
 
 r = []
     
-for i in range(2, 1001):
+for i in range(2, 1000):
     l = []
-    print repeating(1,i)
+    r.append (repeating(1,i))
+    
+print max(r), r.index(max(r))+2
     
