@@ -11,6 +11,13 @@ def terminos_no_repetidos(numero):
         l.append(numero) 
         suma = suma_factorial_digitos(numero)
         return terminos_no_repetidos(suma)
-        
 
-print len([x for x in range(1, 10**6) if len(terminos_no_repetidos(x)) == 60])
+c=0
+for i in range(1, 10**6):
+    l=[]
+    if len(terminos_no_repetidos(i)) == 60:
+        c=c+1
+        
+print c
+     
+
