@@ -27,3 +27,4 @@ for i in range(2, 1000):
     
 print max(r), r.index(max(r))+2
     
+  
