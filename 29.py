@@ -12,3 +12,5 @@ for i in product(r, repeat=2):
     #s.add(sum(map(pow,i, r)))
     
 print len(s)
+
+##9183
