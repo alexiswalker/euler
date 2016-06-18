@@ -25,6 +25,8 @@ def divisors(number):
         if number%i == 0:
             yield i
 
+def is_odd(number):
+    return number & 1 == 1
 
 if __name__ == '__main__':
     print [i for i in primes_sieve(101)]
