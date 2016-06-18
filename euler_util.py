@@ -19,7 +19,13 @@ def is_prime(n):
 def rotate(string, n):
     return string[n:] + string[:n]
 
+def divisors(number):
+    for i in range(1, number/2+1):
+        if number%i == 0:
+            yield i
+    yield number
+
+
 if __name__ == '__main__':
-    for i in primes_sieve(100):
-        print i 
+    print [i for i in divisors(28)]
 
