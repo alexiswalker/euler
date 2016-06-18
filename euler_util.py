@@ -1,4 +1,5 @@
 def primes_sieve(limit):
+    limit = limit + 1
     primes = [True]*limit
     primes[0] = primes[1] = False
     
@@ -26,5 +27,5 @@ def divisors(number):
 
 
 if __name__ == '__main__':
-    print [i for i in divisors(28)]
+    print [i for i in primes_sieve(101)]
 
