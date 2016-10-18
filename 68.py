@@ -1,8 +1,6 @@
 from constraint import *
 
-class Gon:
-    def __init__(self, solution):
-        self.solution = solution
+
 
 problem = Problem()
 constraint = lambda a, b, c: a+b+c == 14
@@ -18,12 +16,17 @@ problem.addConstraint(constraint, ('h','i','d'))
 problem.addConstraint(constraint, ('e','j','i'))
 
 solutions = problem.getSolutions()
-s = solutions[0]
 
-a = [int(str(s['a'])+str(s['f'])+str(s['j'])),
-int(str(s['b'])+str(s['g'])+str(s['f'])),
-int(str(s['c'])+str(s['h'])+str(s['g'])),
-int(str(s['d'])+str(s['i'])+str(s['h'])),
-int(str(s['e'])+str(s['j'])+str(s['i']))]
+l = []
+for s in solutions:
+    a = [int(str(s['a'])+str(s['f'])+str(s['j'])),
+    int(str(s['b'])+str(s['g'])+str(s['f'])),
+    int(str(s['c'])+str(s['h'])+str(s['g'])),
+    int(str(s['d'])+str(s['i'])+str(s['h'])),
+    int(str(s['e'])+str(s['j'])+str(s['i']))]
 
-print a,  a[a.index(max(a)):]+ a[:a.index(max(a))]
+    #l.append(''.join([str(x) for x in a[a.index(max(a)):]+ a[:a.index(max(a))]]))
+    l.append(''.join([str(x) for x in a]))
+
+print l#max([int(x) for x in l])
+#6531031914842725
