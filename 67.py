@@ -1,4 +1,7 @@
 
+def cargar_datos():
+    pass
+
 f = open('p067_triangle.txt', 'r')
 file = f.readlines()
 f.close()
