@@ -1,8 +1,10 @@
-class Datos:
-    datos=None
-    def obtener_datos_desde_archivo(self, path):
-        f = open(path, 'r')
+
+def obtener_datos_desde_archivo(path):
+    with open(path, 'r') as f:
         file = f.readlines()
-        f.close()
-        self.datos = [i.split(' ') for i in file]
+
+    return [map(int, i.split(' ')) for i in file]
         
+if __name__ == '__main__':
+    print obtener_datos_desde_archivo('p067_triangle.txt')     
+  
