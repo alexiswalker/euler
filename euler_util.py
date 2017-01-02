@@ -32,5 +32,5 @@ def is_odd(number):
     return number & 1 == 1
 
 if __name__ == '__main__':
-    print [i for i in primes_sieve(101)]
+    print [i for i in range(3,14,2) if is_prime(i)]
 
