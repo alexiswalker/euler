@@ -16,7 +16,6 @@ frecuencia=collections.Counter(suma_de_lados)
 
 mayor_frecuencia = frecuencia.most_common(1)
 
-
 print mayor_frecuencia
 
 
