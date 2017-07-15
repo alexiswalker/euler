@@ -19,13 +19,13 @@ primos = [i for i in primes_sieve(limite)]
 
 m = 0
 for i in range(len(primos)):
-    l= cantidad_elementos_anterior_a_superar_limite(primos, limite, i)
-    if l<m:
+    l = cantidad_elementos_anterior_a_superar_limite(primos, limite, i)
+    if l < m:
         continue
-    c= cantidad_elementos_suma_es_primo(primos, i, l)
-    if c>m:
-        m=c
-        p=i
+    c = cantidad_elementos_suma_es_primo(primos, i, l)
+    if c > m:
+        m = c
+        p = i
 
-print m,p,sum(primos[p:p+m])
+print (m,p,sum(primos[p:p+m]))
 

@@ -1,5 +1,6 @@
 from itertools import permutations, combinations
 
+
 def es_pandigital(n):
     return ''.join(sorted(n)) == '123456789'
 

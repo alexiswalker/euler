@@ -20,7 +20,7 @@ for palabra in archivo:
     c=0
     for caracter in palabra:
         c+=indice_letra(caracter)
-    
+
     if es_triangulo(c):
         resultado +=1
 

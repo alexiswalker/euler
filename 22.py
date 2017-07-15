@@ -9,8 +9,7 @@ def names():
 
 def position():
     n = names()
-    return
-     { n[i] : i+1 for i in range(len(n))}
+    return { n[i] : i+1 for i in range(len(n))}
 
 
 
